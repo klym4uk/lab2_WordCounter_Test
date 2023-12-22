@@ -59,7 +59,23 @@ public class TestingWordCounterMethods {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void validStartingEndingWithSpacesInputCharsCountTest(){
+        final String inputRow = "     Testing    chars                count   ";
+        final int expectedResult = 17;
+        final int actualResult = WordCounter.getCharsCount(inputRow);
 
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void validStartingEndingWithSpacesInputWordsCountTest(){
+        final String inputRow = "        Testing    words        count       ";
+        final int expectedResult = 3;
+        final int actualResult = WordCounter.getWordsCount(inputRow);
+
+        assertEquals(expectedResult, actualResult);
+    }
 
     @Test
     public void spacesInputCharsCountTest(){
